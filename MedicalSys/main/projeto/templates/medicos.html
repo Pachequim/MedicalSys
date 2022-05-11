@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de medicos</title>
+</head>
+<body>
+    <ul>
+        {% for medico in medicos %}
+            <a href="{% url 'update_medico' medico.id %}">
+                <li> {{ medico.nome }} </li>
+            </a>
+        {%endfor%}
+    </ul>
+    <a href="{% url 'create_medico' %}">Cadastrar novo medico</a>
+</body>
+</html>
